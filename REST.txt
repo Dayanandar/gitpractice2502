@@ -1,0 +1,60 @@
+to create a database
+
+Command: create database moviebooking;
+
+To select the database
+command: use moviebooking;
+
+
+To create a login Table
+command: create table movieuser(
+     userid varchar(10),
+     username varchar(20),
+     useremail varchar(20),
+     userpassword varchar(20),
+     userrole varchar(10)   
+);
+
+
+To show all the tablenames:
+
+command: show tables;
+
+
+
+To show structure of the table
+command:describe movieuser;
+
+
+Insert data into the movieuser table
+command: insert into movieuser values('101','mohit','mohit@gmail.com','123abc','user'),
+  ('102','peeyush','peeyush@gmail.com','123abcd','admin'),
+('103','deepak','deepak@gmail.com','1234abc','user');
+
+
+
+To display all the data from the table
+command:select * from movieuser;
+
+
+
+To display any particular row or id
+command:select * from movieuser where userid='101';
+
+
+To select few coloumns
+command:select userid,username from movieuser;
+
+
+To save the data
+command: commit;
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+To create new user
+
+command: create user 'root1' identified with mysql_native_password by 'admin';
+
+
+To give all permission or preveliges
+command: grant all privileges on *.* to 'root1';
